@@ -1,6 +1,16 @@
+import { useNavigate } from "react-router-dom";
+
 function BusinessCard({ name, rating, location, image }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/business/${name}`, {
+  state: { name, rating, location, image },
+});
+  };
+
   return (
-    <div style={styles.card}>
+    <div style={styles.card} onClick={handleClick}>
       <img src={image} alt={name} style={{ width: "100%" }} />
       <h3>{name}</h3>
       <p>⭐ {rating}</p>
@@ -15,6 +25,7 @@ const styles = {
     padding: "15px",
     margin: "10px",
     width: "200px",
+    cursor: "pointer",
   },
 };
 
