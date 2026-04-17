@@ -1,12 +1,26 @@
-function SearchBar() {
+import { useState } from "react";
+
+function SearchBar({ onSearch }) {
+  const [query, setQuery] = useState("");
+
+  const handleSearch = () => {
+    onSearch(query);
+  };
+
   return (
     <div style={styles.container}>
       <input
         type="text"
         placeholder="Search for restaurants..."
-        style={styles.input}
+        value={query}
+        onChange={(e) => {
+  setQuery(e.target.value);
+  onSearch(e.target.value);
+}}
       />
-      <button style={styles.button}>Search</button>
+      <button onClick={handleSearch} style={styles.button}>
+        Search
+      </button>
     </div>
   );
 }
