@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <div style={styles.nav}>
-      <h2>SL Yelp 🇱🇰</h2>
+      <h2>SL Rating 🇱🇰</h2>
     </div>
   );
 }

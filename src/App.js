@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <div>
-        <h1>SL Yelp 🇱🇰</h1>
+        <h1>SL Rating 🇱🇰</h1>
 
         <Routes>
           <Route path="/" element={<Home />} />

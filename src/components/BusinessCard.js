@@ -1,14 +1,10 @@
-function BusinessCard() {
+function BusinessCard({ name, rating, location, image }) {
   return (
     <div style={styles.card}>
-      <img
-  src="https://via.placeholder.com/200"
-  alt="food"
-  style={{ width: "100%" }}
-/>
-      <h3>Pizza Hut</h3>
-      <p>⭐ 4.2</p>
-      <p>Colombo</p>
+      <img src={image} alt={name} style={{ width: "100%" }} />
+      <h3>{name}</h3>
+      <p>⭐ {rating}</p>
+      <p>{location}</p>
     </div>
   );
 }
