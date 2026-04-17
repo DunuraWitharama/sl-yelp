@@ -1,9 +1,27 @@
+import Navbar from "../components/Navbar";
+import SearchBar from "../components/SearchBar";
+import BusinessCard from "../components/BusinessCard";
+
 function Home() {
   return (
     <div>
-      <h2>Home Page</h2>
+      <Navbar />
+      <SearchBar />
+
+      <div style={styles.grid}>
+        <BusinessCard />
+        <BusinessCard />
+        <BusinessCard />
+      </div>
     </div>
   );
 }
+
+const styles = {
+  grid: {
+    display: "flex",
+    justifyContent: "center",
+  },
+};
 
 export default Home;
